@@ -67,7 +67,7 @@ export default function Navbar() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         menuOpen ? "bg-white border-b border-[#e0ddd8]" : isTransparent ? "bg-transparent" : "bg-white border-b border-[#e0ddd8]"
       }`}>
-        <div className="max-w-screen-2xl mx-auto px-2 md:px-13">
+        <div className="max-w-screen-2xl mx-auto px-2 md:px-4">
           <div className="flex items-center justify-between h-20 md:h-24">
 
             {/* Logo */}
@@ -85,7 +85,7 @@ export default function Navbar() {
             {/* Hamburger / Close */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className={`flex flex-col justify-center gap-[7px] p-2 transition-colors duration-300 ${
+              className={`flex flex-col justify-center gap-[7px] p-2 pr-5 transition-colors duration-300 ${
                 menuOpen || !isTransparent ? "text-black" : "text-white"
               }`}
               aria-label="Toggle menu"
