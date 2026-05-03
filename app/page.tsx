@@ -60,7 +60,7 @@ export default function HomePage() {
         />
 
         {/* ─── PRODUCT SHOWCASE ──────────────────────────────────── */}
-        <section className="overflow-hidden border-t border-[#e0ddd8]">
+        <section className="overflow-hidden">
           <div className="flex">
             {[
               { label: "PERFUME SPRAYS", sub: "EDP / EDT / Body Mist", num: "01" },
@@ -125,7 +125,7 @@ export default function HomePage() {
           imageSrc="/images/hero-building.png"
           imageAlt="Our base illustration"
           imagePosition="left"
-          bg="cream"
+          bg="white"
           borderTop={false}
         />
 

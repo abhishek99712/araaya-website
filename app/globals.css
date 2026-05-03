@@ -3,7 +3,7 @@
 @theme inline {
   --color-background: #ffffff;
   --color-foreground: #000000;
-  --color-off-white: #f7f5f2;
+  --color-off-white: #ffffff;
   --color-charcoal: #000000;
   --color-muted: #000000;
   --color-border: #e0ddd8;
@@ -44,7 +44,7 @@ h1, h2, h3, h4 {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #f7f5f2;
+  background: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
   background: #0a0a0a;

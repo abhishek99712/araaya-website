@@ -51,7 +51,7 @@ export default function ProductsPage() {
           imageSrc="/images/product-home-care.png"
           imageAlt="Home care and lifestyle products"
           imagePosition="right"
-          bg="cream"
+          bg="white"
           list={[
             "Incense",
             "Candles",
@@ -80,7 +80,7 @@ export default function ProductsPage() {
         />
 
         {/* ─── PRODUCT CATEGORY GRID ────────────────────────────── */}
-        <section className="py-16 md:py-24 bg-[#0a0a0a] border-t border-[#e0ddd8]">
+        <section className="py-16 md:py-24 bg-[#0a0a0a]">
           <div className="max-w-screen-xl mx-auto px-6 md:px-10">
             <FadeIn direction="up">
               <p className="section-label font-bold text-white/40 mb-8 text-center">ALL CATEGORIES</p>

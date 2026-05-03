@@ -89,7 +89,7 @@ export default function ActivitiesPage() {
             imageSrc={activity.imageSrc}
             imageAlt={activity.imageAlt}
             imagePosition={activity.imagePosition}
-            bg={idx % 2 === 0 ? "white" : "cream"}
+            bg="white"
             py="py-12 lg:py-16"
             gap="gap-8 md:gap-24"
           />

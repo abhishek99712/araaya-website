@@ -30,14 +30,14 @@ export default function SectionImageText({
   visualSlot,
   imagePosition = "left",
   bg = "white",
-  borderTop = true,
+  borderTop = false,
   list,
   listLabel = "Product Range",
   link,
   py = "py-12 md:py-14 lg:py-20",
   gap = "gap-8 md:gap-28",
 }: SectionImageTextProps) {
-  const bgClass = bg === "cream" ? "bg-[#f7f5f2]" : "bg-white";
+  const bgClass = bg === "cream" ? "bg-[#ffffff]" : "bg-white";
   const borderClass = borderTop ? "border-t border-[#e0ddd8]" : "";
   const imgLeft = imagePosition === "left";
 

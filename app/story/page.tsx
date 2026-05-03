@@ -45,7 +45,7 @@ export default function StoryPage() {
           imageSrc="/images/story-our-story.png"
           imageAlt="Our story"
           imagePosition="right"
-          bg="cream"
+          bg="white"
           py="py-12 lg:py-16"
           gap="gap-8 md:gap-24"
         />
@@ -67,7 +67,7 @@ export default function StoryPage() {
         />
 
         {/* ─── REGULATORY STANDARDS ─────────────────────────────── */}
-        <section id="regulatory" className="py-8 md:py-12 lg:py-16 bg-[#f7f5f2] border-t border-[#e0ddd8]">
+        <section id="regulatory" className="py-8 md:py-12 lg:py-16 bg-white">
           <div className="max-w-screen-xl mx-auto px-6 md:px-10">
             <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
               <FadeIn direction="left">
@@ -101,7 +101,7 @@ export default function StoryPage() {
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className={`flex gap-6 p-6 md:p-8 bg-white hover:bg-[#f7f5f2] transition-colors duration-200 ${
+                      className={`flex gap-6 p-6 md:p-8 bg-white hover:bg-[#f5f5f5] transition-colors duration-200 ${
                         i > 0 ? "border-t border-[#e0ddd8]" : ""
                       }`}
                     >
@@ -121,7 +121,7 @@ export default function StoryPage() {
         </section>
 
         {/* ─── OUR TEAM ─────────────────────────────────────────── */}
-        <section id="team" className="py-8 md:py-12 lg:py-16 bg-white border-t border-[#e0ddd8]">
+        <section id="team" className="py-8 md:py-12 lg:py-16 bg-white">
           <div className="max-w-screen-xl mx-auto px-6 md:px-10">
             <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
               <FadeIn direction="left">
@@ -130,7 +130,7 @@ export default function StoryPage() {
                     (role, i) => (
                       <div
                         key={i}
-                        className="border border-[#e0ddd8] p-6 md:p-8 aspect-square flex flex-col justify-end bg-[#f7f5f2] hover:bg-white transition-colors duration-200"
+                        className="border border-[#e0ddd8] p-6 md:p-8 aspect-square flex flex-col justify-end bg-[#f5f5f5] hover:bg-white transition-colors duration-200"
                       >
                         <div className="mb-4">
                           <div className="w-10 h-10 rounded-full border border-[#d1d1d1] flex items-center justify-center">
@@ -169,7 +169,7 @@ export default function StoryPage() {
         </section>
 
         {/* ─── TIMELINE ─────────────────────────────────────────── */}
-        <section className="py-16 md:py-24 bg-[#0a0a0a] border-t border-[#e0ddd8]">
+        <section className="py-16 md:py-24 bg-[#0a0a0a]">
           <div className="max-w-screen-xl mx-auto px-6 md:px-10">
             <FadeIn direction="up">
               <p className="section-label font-bold text-white/40 text-center mb-12">OUR MILESTONES</p>

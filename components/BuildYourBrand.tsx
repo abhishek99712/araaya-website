@@ -2,7 +2,7 @@ import ContactForm from "./ContactForm";
 
 export default function BuildYourBrand() {
   return (
-    <section className="py-12 md:py-20 lg:py-28 bg-[#f7f5f2]">
+    <section className="py-12 md:py-20 lg:py-28 bg-[#ffffff]">
       <div className="max-w-screen-xl mx-auto px-6 md:px-10">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
           {/* Left */}
