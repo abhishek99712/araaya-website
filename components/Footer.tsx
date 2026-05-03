@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   "OUR ACTIVITIES": [
@@ -32,12 +33,14 @@ export default function Footer() {
     <footer className="bg-white">
 
       {/* Logo row */}
-      <div className="max-w-screen-xl mx-auto px-6 md:px-10 py-12 flex justify-center">
-        <span
-          className="font-display text-[13px] font-bold tracking-[0.35em] uppercase text-black"
-        >
-          ARAAYA INTERNATIONAL
-        </span>
+      <div className="max-w-screen-xl mx-auto px-6 md:px-10 py-6 flex justify-center">
+        <Image
+          src="/images/logo-black.png"
+          alt="Araaya International Private Limited"
+          width={400}
+          height={400}
+          className="w-48 md:w-56 h-auto -my-14"
+        />
       </div>
 
       {/* Divider */}
@@ -55,7 +58,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="font-sans text-[15px] hover:opacity-50 transition-opacity duration-200 leading-snug"
+                    className="font-sans text-[15px] font-medium hover:opacity-50 transition-opacity duration-200 leading-snug"
                   >
                     {link.label}
                   </Link>

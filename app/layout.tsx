@@ -11,9 +11,11 @@ const inter = Inter({
 });
 
 const satoshi = localFont({
-  src: "../public/fonts/Satoshi-Bold.otf",
+  src: [
+    { path: "../public/fonts/Satoshi-Medium.otf", weight: "500", style: "normal" },
+    { path: "../public/fonts/Satoshi-Bold.otf",   weight: "700", style: "normal" },
+  ],
   variable: "--font-satoshi",
-  weight: "700",
 });
 
 export const metadata: Metadata = {

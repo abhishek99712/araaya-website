@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const menuLinks = {
@@ -66,16 +67,19 @@ export default function Navbar() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         menuOpen ? "bg-white border-b border-[#e0ddd8]" : isTransparent ? "bg-transparent" : "bg-white border-b border-[#e0ddd8]"
       }`}>
-        <div className="max-w-screen-xl mx-auto px-6 md:px-10">
-          <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-6">
+          <div className="flex items-center justify-between h-20 md:h-24">
 
             {/* Logo */}
             <Link href="/" className="group">
-              <span className={`font-display text-[11px] font-bold tracking-[0.28em] uppercase transition-colors duration-300 ${
-                menuOpen || !isTransparent ? "text-black" : "text-white"
-              }`}>
-                ARAAYA
-              </span>
+              <Image
+                src={menuOpen || !isTransparent ? "/images/logo-black.png" : "/images/logo-white.png"}
+                alt="Araaya International Private Limited"
+                width={200}
+                height={200}
+                className="w-38 md:w-47 h-auto object-contain transition-opacity duration-300"
+                priority
+              />
             </Link>
 
             {/* Hamburger / Close */}
@@ -113,7 +117,7 @@ export default function Navbar() {
       />
 
       {/* Dropdown menu — scrollable on mobile */}
-      <div className={`fixed top-[64px] md:top-[80px] left-0 right-0 z-40 bg-white border-b border-[#e0ddd8] transition-all duration-300 overflow-y-auto max-h-[calc(100vh-64px)] md:max-h-[calc(100vh-80px)] ${
+      <div className={`fixed top-[80px] md:top-[96px] left-0 right-0 z-40 bg-white border-b border-[#e0ddd8] transition-all duration-300 overflow-y-auto max-h-[calc(100vh-80px)] md:max-h-[calc(100vh-96px)] ${
         menuOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-1"
       }`}>
         <div className="max-w-screen-xl mx-auto px-6 md:px-10 py-10 md:py-12">
@@ -128,7 +132,7 @@ export default function Navbar() {
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="font-sans text-[15px] text-black hover:opacity-50 transition-opacity duration-200"
+                        className="font-sans text-[15px] font-medium text-black hover:opacity-50 transition-opacity duration-200"
                       >
                         {link.label}
                       </Link>
