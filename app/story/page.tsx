@@ -11,7 +11,7 @@ export default function StoryPage() {
       <Navbar />
       <main>
         <PageHero
-          imageSrc="/images/hero-story.jpg"
+          imageSrc="/images/hero-story-v2.jpg"
           imageAlt="Our story"
           title="STORY"
           subtitle="Discover our journey, our foundation, and the people behind Araaya International Private Limited. This section reflects our approach to building a modern manufacturing company. It offers insight into how we operate, what we value, and what we aim to create."
@@ -168,26 +168,106 @@ export default function StoryPage() {
           </div>
         </section>
 
-        {/* ─── TIMELINE ─────────────────────────────────────────── */}
-        <section className="py-16 md:py-24 bg-[#0a0a0a]">
+        {/* ─── CERTIFICATIONS & LICENSES ────────────────────────── */}
+        <section id="certifications" className="py-8 md:py-12 lg:py-16 bg-[#f5f4f0]">
           <div className="max-w-screen-xl mx-auto px-6 md:px-10">
+
+            {/* Header row — label + title on left, description on right */}
             <FadeIn direction="up">
-              <p className="section-label font-bold text-white/40 text-center mb-12">OUR MILESTONES</p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
-                {[
-                  { year: "2025", event: "Founded", detail: "Araaya International established" },
-                  { year: "2025", event: "Facility", detail: "Manufacturing unit operational" },
-                  { year: "2025", event: "First Batch", detail: "First products developed & tested" },
-                  { year: "2025+", event: "Scale Up", detail: "Expanding product lines & capacity" },
-                ].map((item, i) => (
-                  <div key={i} className="bg-[#0a0a0a] p-8 md:p-10 border border-white/5 hover:border-white/20 transition-colors duration-300">
-                    <p className="font-display text-3xl md:text-4xl font-bold text-white/20 mb-4">{item.year}</p>
-                    <p className="text-white text-[11px] font-semibold tracking-[0.12em] uppercase mb-2">{item.event}</p>
-                    <p className="text-white/40 text-[11px] leading-relaxed">{item.detail}</p>
-                  </div>
-                ))}
+              <div className="grid md:grid-cols-2 gap-8 items-end mb-14">
+                <div>
+                  <p className="section-label font-bold text-black mb-3">VERIFIED &amp; RECOGNISED</p>
+                  <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.05]">
+                    CERTIFICATIONS
+                    <br />
+                    &amp; LICENSES
+                  </h2>
+                </div>
+                <p className="font-sans text-black text-[16px] leading-[1.6] md:pb-1">
+                  All applicable government registrations and certifications that authorise our operations and validate our standing as a compliant manufacturing entity.
+                </p>
               </div>
             </FadeIn>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
+              {[
+                {
+                  label: "STARTUP RECOGNITION",
+                  title: "Start Up India Certificate",
+                  num: "01",
+                  file: "/documents/startup-india-certificate.pdf",
+                  preview: "/documents/startup-india-preview.png",
+                },
+                {
+                  label: "MSME REGISTRATION",
+                  title: "MSME Certificate",
+                  num: "02",
+                  file: "/documents/msme-certificate.pdf",
+                  preview: "/documents/msme-preview.png",
+                },
+                {
+                  label: "LEGAL METROLOGY",
+                  title: "Metrology License",
+                  num: "03",
+                  file: "/documents/metrology-license.pdf",
+                  preview: "/documents/metrology-preview.png",
+                },
+                {
+                  label: "TAX REGISTRATION",
+                  title: "GSTIN Certificate",
+                  num: "04",
+                  file: "/documents/gstin-certificate.pdf",
+                  preview: "/documents/gstin-preview.png",
+                },
+              ].map((cert, i) => (
+                <FadeIn key={i} direction="up" delay={i * 0.08} className="h-full">
+                  <a
+                    href={cert.file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col h-full bg-white hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  >
+                    {/* Document preview */}
+                    <div className="relative w-full aspect-[3/4] bg-[#eeede9] overflow-hidden flex-shrink-0">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={cert.preview}
+                        alt={cert.title}
+                        className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+                      />
+                      {/* number badge */}
+                      <div className="absolute top-3 left-3 px-2 py-1 bg-white/90 backdrop-blur-sm">
+                        <span className="text-[10px] font-bold tracking-widest text-black">{cert.num}</span>
+                      </div>
+                      {/* open arrow */}
+                      <div className="absolute top-3 right-3 w-8 h-8 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                          <path d="M1 9L9 1M9 1H4M9 1V6" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Card footer */}
+                    <div className="flex flex-col flex-1 px-5 py-5 border-t border-[#e0ddd8]">
+                      <p className="text-[9px] font-semibold tracking-[0.16em] text-black/40 uppercase mb-2">
+                        {cert.label}
+                      </p>
+                      <p className="font-display text-[18px] font-bold text-black leading-snug">
+                        {cert.title}
+                      </p>
+                      <div className="mt-auto pt-4 flex items-center gap-2">
+                        <span className="text-[9px] font-semibold tracking-[0.12em] text-black/40 uppercase group-hover:text-black transition-colors duration-300">
+                          VIEW DOCUMENT
+                        </span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className="opacity-30 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
+                          <path d="M1 9L9 1M9 1H4M9 1V6" stroke="black" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </FadeIn>
+              ))}
+            </div>
           </div>
         </section>
 

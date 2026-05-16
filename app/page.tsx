@@ -14,7 +14,7 @@ export default function HomePage() {
         <section className="relative h-[70vh] md:h-screen min-h-[480px] bg-[#1a1a1a] overflow-hidden">
           {/* Background image */}
           <Image
-            src="/images/hero-home.jpg"
+            src="/images/hero-home-v2.jpg"
             alt="Araaya manufacturing"
             fill
             className="object-cover"
@@ -60,43 +60,40 @@ export default function HomePage() {
         />
 
         {/* ─── PRODUCT SHOWCASE ──────────────────────────────────── */}
-        <section className="overflow-hidden">
-          <div className="flex">
-            {[
-              { label: "PERFUME SPRAYS", sub: "EDP / EDT / Body Mist", num: "01" },
-              { label: "PERSONAL CARE", sub: "Roll-On & Attars", num: "02" },
-              { label: "HOME CARE", sub: "Incense & Candles", num: "03" },
-              { label: "LIFESTYLE", sub: "Car & Room Fragrance", num: "04" },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className={`flex-1 relative overflow-hidden group bg-[#0a0a0a] ${
-                  i < 3 ? "border-r border-white/10" : ""
-                }`}
-              >
-                <div className="h-64 md:h-80 flex flex-col justify-end p-5 md:p-7">
-                  <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity duration-500">
-                    <svg viewBox="0 0 80 160" className="w-12 h-24 md:w-16 md:h-32">
-                      <rect x="20" y="15" width="40" height="135" rx="8" stroke="white" strokeWidth="1.5" fill="none" />
-                      <rect x="28" y="5" width="24" height="14" rx="2" stroke="white" strokeWidth="1.2" fill="none" />
-                      <rect x="32" y="-2" width="16" height="9" rx="3" stroke="white" strokeWidth="1.2" fill="none" />
-                      <line x1="22" y1="68" x2="58" y2="68" stroke="white" strokeWidth="0.6" opacity="0.5" />
-                      <rect x="26" y="30" width="28" height="50" rx="1" stroke="white" strokeWidth="0.6" opacity="0.3" fill="none" />
-                    </svg>
+        <section className="bg-white py-4 md:py-6 overflow-hidden">
+          <div className="max-w-screen-xl mx-auto px-6 md:px-10 mb-5">
+            <p className="section-label font-bold mb-1">WHAT WE MAKE</p>
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.2] md:leading-[1.05] mb-8 md:mb-10">
+              OUR PRODUCTS
+            </h2>
+          </div>
+
+          {/* Auto-scrolling single row */}
+          <div className="relative">
+            <div className="flex gap-4 product-marquee">
+              {[
+                { label: "PERFUME SPRAYS", sub: "EDP · EDT · Body Mist", num: "01", img: "/images/showcase-sprays.png" },
+                { label: "HOME CARE", sub: "Incense & Candles", num: "02", img: "/images/showcase-ceramics.png" },
+                { label: "LIFESTYLE", sub: "Car & Room Fragrance", num: "03", img: "/images/showcase-lifestyle.png" },
+                { label: "CUSTOM RANGE", sub: "Concept to Market", num: "04", img: "/images/showcase-product.png" },
+                /* duplicate for seamless loop */
+                { label: "PERFUME SPRAYS", sub: "EDP · EDT · Body Mist", num: "01", img: "/images/showcase-sprays.png" },
+                { label: "HOME CARE", sub: "Incense & Candles", num: "02", img: "/images/showcase-ceramics.png" },
+                { label: "LIFESTYLE", sub: "Car & Room Fragrance", num: "03", img: "/images/showcase-lifestyle.png" },
+                { label: "CUSTOM RANGE", sub: "Concept to Market", num: "04", img: "/images/showcase-product.png" },
+              ].map((item, i) => (
+                <div key={i} className="group flex-shrink-0" style={{ width: "clamp(260px, 26vw, 380px)" }}>
+                  <div className="relative w-full overflow-hidden bg-[#f5f4f0]" style={{ aspectRatio: "1/1" }}>
+                    <Image
+                      src={item.img}
+                      alt={item.label}
+                      fill
+                      className="object-cover object-center group-hover:scale-[1.04] transition-transform duration-700 ease-out"
+                    />
                   </div>
-                  <span className="text-[10px] font-semibold tracking-[0.18em] text-white/25 mb-3 block">
-                    {item.num}
-                  </span>
-                  <p className="text-white text-[10px] md:text-[11px] font-semibold tracking-[0.14em] mb-1.5">
-                    {item.label}
-                  </p>
-                  <p className="text-white/40 text-[10px] tracking-wide">
-                    {item.sub}
-                  </p>
-                  <div className="absolute bottom-0 left-0 w-0 group-hover:w-full h-px bg-white/30 transition-all duration-500" />
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 

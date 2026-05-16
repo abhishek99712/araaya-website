@@ -73,7 +73,7 @@ export default function ActivitiesPage() {
       <Navbar />
       <main>
         <PageHero
-          imageSrc="/images/hero-activities.jpg"
+          imageSrc="/images/hero-activities-v2.jpg"
           imageAlt="Activities"
           title="ACTIVITIES"
           subtitle="An overview of our core operations, from formulation and product development to packaging, manufacturing, and compliance. Each stage is structured to ensure consistency, efficiency, and quality. Our processes are designed to deliver reliable, scalable, and market-ready products."

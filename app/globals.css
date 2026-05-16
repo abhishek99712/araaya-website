@@ -112,6 +112,23 @@ h1, h2, h3, h4 {
   border-color: #0a0a0a;
 }
 
+/* Product marquee auto-scroll */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.product-marquee {
+  animation: marquee 35s linear infinite;
+  width: max-content;
+}
+.product-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar but keep scrollable */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
 /* Animated underline for section labels */
 .section-label {
   font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
