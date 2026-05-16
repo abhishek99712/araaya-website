@@ -91,28 +91,40 @@ export default function StoryPage() {
               </FadeIn>
 
               <FadeIn direction="right" delay={0.15}>
-                <div className="space-y-0 border border-[#e0ddd8]">
+                <div className="grid grid-cols-2 gap-4">
                   {[
-                    { icon: "01", title: "Product Safety Standards", desc: "Raw material validation and product safety testing at every stage." },
-                    { icon: "02", title: "Labeling Requirements", desc: "Compliance with applicable labeling and packaging regulations." },
-                    { icon: "03", title: "Quality Control SOPs", desc: "Defined standard operating procedures for consistent batch quality." },
-                    { icon: "04", title: "Documentation & Traceability", desc: "Full process documentation for transparency and accountability." },
-                    { icon: "05", title: "Distribution Compliance", desc: "Products structured to meet distribution and market entry standards." },
-                  ].map((item, i) => (
-                    <div
-                      key={i}
-                      className={`flex gap-6 p-6 md:p-8 bg-white hover:bg-[#f5f5f5] transition-colors duration-200 ${
-                        i > 0 ? "border-t border-[#e0ddd8]" : ""
-                      }`}
+                    { num: "01", title: "Start Up India Certificate", label: "STARTUP RECOGNITION", file: "/documents/startup-india-certificate.pdf", preview: "/documents/startup-india-preview.png" },
+                    { num: "02", title: "MSME Certificate", label: "MSME REGISTRATION", file: "/documents/msme-certificate.pdf", preview: "/documents/msme-preview.png" },
+                    { num: "03", title: "Metrology License", label: "LEGAL METROLOGY", file: "/documents/metrology-license.pdf", preview: "/documents/metrology-preview.png" },
+                    { num: "04", title: "GSTIN Certificate", label: "TAX REGISTRATION", file: "/documents/gstin-certificate.pdf", preview: "/documents/gstin-preview.png" },
+                  ].map((cert) => (
+                    <a
+                      key={cert.num}
+                      href={cert.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group border border-[#e0ddd8] hover:border-black hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col bg-white"
                     >
-                      <span className="text-[10px] font-semibold tracking-[0.12em] text-black pt-0.5 w-5 flex-shrink-0">
-                        {item.icon}
-                      </span>
-                      <div>
-                        <p className="text-[11px] font-semibold text-black tracking-wide mb-1.5">{item.title}</p>
-                        <p className="text-[11px] text-black leading-relaxed">{item.desc}</p>
+                      {/* Square preview */}
+                      <div className="relative w-full overflow-hidden bg-[#f5f4f0]" style={{ aspectRatio: "1/1" }}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={cert.preview}
+                          alt={cert.title}
+                          className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+                        />
+                        <div className="absolute top-2 right-2 w-6 h-6 bg-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+                            <path d="M1 9L9 1M9 1H4M9 1V6" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </div>
                       </div>
-                    </div>
+                      {/* Label */}
+                      <div className="px-4 py-3 border-t border-[#e0ddd8]">
+                        <p className="text-[9px] font-semibold tracking-[0.14em] text-black/40 uppercase mb-1">{cert.label}</p>
+                        <p className="font-display text-[13px] font-bold text-black leading-snug">{cert.title}</p>
+                      </div>
+                    </a>
                   ))}
                 </div>
               </FadeIn>
