@@ -61,12 +61,6 @@ export default function HomePage() {
 
         {/* ─── PRODUCT SHOWCASE ──────────────────────────────────── */}
         <section className="bg-white py-4 md:py-6 overflow-hidden">
-          <div className="max-w-screen-xl mx-auto px-6 md:px-10 mb-5">
-            <p className="section-label font-bold mb-1">WHAT WE MAKE</p>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.2] md:leading-[1.05] mb-8 md:mb-10">
-              OUR PRODUCTS
-            </h2>
-          </div>
 
           {/* Auto-scrolling single row */}
           <div className="relative">
