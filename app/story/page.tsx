@@ -132,48 +132,48 @@ export default function StoryPage() {
           </div>
         </section>
 
-        {/* ─── OUR TEAM ─────────────────────────────────────────── */}
-        <section id="team" className="py-8 md:py-12 lg:py-16 bg-white">
+        {/* ─── OUR FOUNDERS ─────────────────────────────────────── */}
+        <section id="founders" className="py-8 md:py-12 lg:py-16 bg-white">
           <div className="max-w-screen-xl mx-auto px-6 md:px-10">
-            <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-24 items-center">
               <FadeIn direction="left">
-                <div className="grid grid-cols-2 gap-4">
-                  {["PRODUCT DEVELOPMENT", "OPERATIONS", "QUALITY CONTROL", "PACKAGING & DISPATCH"].map(
-                    (role, i) => (
-                      <div
-                        key={i}
-                        className="border border-[#e0ddd8] p-6 md:p-8 aspect-square flex flex-col justify-end bg-[#f5f5f5] hover:bg-white transition-colors duration-200"
-                      >
-                        <div className="mb-4">
-                          <div className="w-10 h-10 rounded-full border border-[#d1d1d1] flex items-center justify-center">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                              <circle cx="8" cy="6" r="3" stroke="#0a0a0a" strokeWidth="1" opacity="0.4" />
-                              <path d="M2 14c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="#0a0a0a" strokeWidth="1" opacity="0.4" />
-                            </svg>
-                          </div>
-                        </div>
-                        <p className="text-[9px] font-semibold tracking-[0.12em] uppercase text-black opacity-60">
-                          {role}
-                        </p>
-                      </div>
-                    )
-                  )}
+                <div className="flex gap-4 items-start">
+                  {/* Manav — sits at the top */}
+                  <div className="flex-1 relative overflow-hidden group border border-[#d1cec9]" style={{ aspectRatio: "3/4" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/founder-manav-sharma.png"
+                      alt="Manav Sharma"
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent pt-12 pb-4 px-4">
+                      <p className="font-display text-[13px] font-bold text-white leading-tight">Manav Sharma</p>
+                      <p className="text-[8px] font-semibold tracking-[0.16em] uppercase text-white/60 mt-0.5">Co-Founder &amp; Director</p>
+                    </div>
+                  </div>
+                  {/* Arpit — pushed down */}
+                  <div className="flex-1 relative overflow-hidden group border border-[#d1cec9] mt-14" style={{ aspectRatio: "3/4" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/founder-arpit-singh.jpg"
+                      alt="Arpit Singh"
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent pt-12 pb-4 px-4">
+                      <p className="font-display text-[13px] font-bold text-white leading-tight">Arpit Singh</p>
+                      <p className="text-[8px] font-semibold tracking-[0.16em] uppercase text-white/60 mt-0.5">Co-Founder &amp; Director</p>
+                    </div>
+                  </div>
                 </div>
               </FadeIn>
 
               <FadeIn direction="right" delay={0.15}>
-                <p className="section-label font-bold mb-1">PEOPLE BEHIND THE PROCESS</p>
+                <p className="section-label font-bold mb-1">PEOPLE BEHIND THE FOUNDATION</p>
                 <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.2] md:leading-[1.05] mb-5 md:mb-8">
-                  OUR TEAM
+                  THE FOUNDERS
                 </h2>
                 <p className="text-[16px] text-black leading-[1.5] mb-5">
-                  Our team is built around product development, operations, and execution, working together
-                  to maintain consistency and quality across every stage.
-                </p>
-                <p className="text-[16px] text-black leading-[1.5]">
-                  As a growing organization, we focus on building a team that values structure, attention
-                  to detail, and reliable processes. Each member contributes to delivering products that
-                  meet both brand expectations and market standards.
+                  Araaya International Private Limited was founded by two young entrepreneurs driven by a shared interest in business, branding, and product creation. What started as an idea during their early entrepreneurial journey gradually evolved into a structured manufacturing venture focused on personal care, home care, and lifestyle products. Built on curiosity, experimentation, and long-term vision, the company reflects a modern approach towards product development and manufacturing. Today, the founders continue to focus on building reliable products, scalable operations, and a growing manufacturing ecosystem.
                 </p>
               </FadeIn>
             </div>
