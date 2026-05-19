@@ -19,6 +19,11 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   title: "Araaya International Private Limited",
   description:
     "A new-age manufacturing startup producing personal care, home care, and lifestyle products. Formulation, development, and manufacturing for modern brands.",
@@ -34,6 +39,12 @@ export const metadata: Metadata = {
     title: "Araaya International Private Limited",
     description: "Modernizing product manufacturing for personal care, home care & lifestyle brands.",
     type: "website",
+    images: [
+      {
+        url: "/images/logo-black.png",
+        alt: "Araaya International Private Limited",
+      },
+    ],
   },
 };
 
