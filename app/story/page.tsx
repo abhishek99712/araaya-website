@@ -84,9 +84,12 @@ export default function StoryPage() {
                   safety standards. From raw material handling to final product output, each stage is
                   governed by structured guidelines.
                 </p>
-                <p className="text-[16px] text-black leading-[1.5]">
+                <p className="text-[16px] text-black leading-[1.5] mb-5">
                   This ensures product reliability, process consistency, and compliance with required
                   norms. Our focus is on maintaining transparency and discipline in manufacturing practices.
+                </p>
+                <p className="text-[16px] text-black leading-[1.5] font-bold">
+                Cosmetic Manufacturing License No.: COS8UP2026000015
                 </p>
               </FadeIn>
 
