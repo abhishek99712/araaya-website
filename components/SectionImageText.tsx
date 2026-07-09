@@ -54,7 +54,7 @@ export default function SectionImageText({
   );
 
   return (
-    <section id={id} className={`${py} ${bgClass} ${borderClass}`}>
+    <section id={id} className={`${py} ${bgClass} ${borderClass} overflow-hidden`}>
       <div className="max-w-screen-xl mx-auto px-6 md:px-10">
         <div className={`grid md:grid-cols-2 ${gap} items-center`}>
 

@@ -63,7 +63,7 @@ export default function HomePage() {
         <section className="bg-white py-4 md:py-6 overflow-hidden">
 
           {/* Auto-scrolling single row */}
-          <div className="relative">
+          <div className="relative overflow-hidden">
             <div className="flex gap-4 product-marquee">
               {[
                 { label: "PERFUME SPRAYS", sub: "EDP · EDT · Body Mist", num: "01", img: "/images/showcase-sprays.png" },
